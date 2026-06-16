@@ -1,0 +1,25 @@
+{
+  "name": "new-chapter-homes",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/image": "^2.0.0",
+    "@tailwindcss/vite": "^4.3.1",
+    "@vueuse/motion": "^3.0.3",
+    "nuxt": "^4.4.8",
+    "swiper": "^12.2.0",
+    "tailwindcss": "^4.3.1",
+    "vue": "^3.5.35",
+    "vue-router": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.3"
+  }
+}
