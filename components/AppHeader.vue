@@ -61,8 +61,8 @@ const isMenuOpen = ref(false)
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'Our Process', path: '/process' },
-  { name: 'Success Stories', path: '/testimonials' },
-  { name: 'FAQ', path: '/faq' },
-  { name: 'About Us', path: '/about' }
+//   { name: 'Success Stories', path: '/testimonials' },
+//   { name: 'FAQ', path: '/faq' },
+//   { name: 'About Us', path: '/about' }
 ]
 </script>
