@@ -34,7 +34,7 @@
         >
           <div class="relative rounded-3xl overflow-hidden shadow-xl border border-slate-100 bg-slate-100 aspect-[4/3] lg:aspect-[4/5]">
             <NuxtImg 
-              src="/images/temporary-housing-stay.jpg" 
+              src="/images/home-hero-bg.png" 
               alt="Comfortable local temporary housing living setup"
               loading="lazy"
               format="webp"
@@ -103,7 +103,7 @@
         >
           <div class="relative rounded-3xl overflow-hidden shadow-xl border border-slate-100 bg-slate-100 aspect-[4/3] lg:aspect-[4/5]">
             <NuxtImg 
-              src="/images/active-renovation.jpg" 
+              src="/images/home-hero-bg.png" 
               alt="Professional contractors installing high-end modern kitchen finishes"
               loading="lazy"
               format="webp"
