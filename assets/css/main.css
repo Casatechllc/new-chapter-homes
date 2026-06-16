@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* 
+  NEW HOMES CHAPTER - DESIGN SYSTEM
+  Inspired by image_591f66.jpg & watermarked_img_6956259626129178184.png
+*/
+
+@theme {
+  /* Colors */
+  --color-brand-blue: #0B3D91;
+  --color-brand-lightblue: #00A3FF;
+  --color-brand-terracotta: #E07A5F;
+  --color-brand-silver: #D1D5DB;
+
+  /* Fonts - Matching the clean geometric sans-serif from the logo */
+  --font-sans: 'Inter', 'Montserrat', system-ui, sans-serif;
+  --font-display: 'Montserrat', sans-serif;
+  --font-script: 'Caveat', 'Coming Soon', cursive;
+}
+
+@layer utilities {
+  /* Premium Text Gradient Utility Class */
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-brand-blue) 0%, var(--color-brand-lightblue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-accent {
+    background: linear-gradient(135deg, var(--color-brand-lightblue) 0%, var(--color-brand-terracotta) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Custom font imports for deep matching */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;700;800&family=Caveat:wght@500;700&display=swap');
+
+/* Global Element Polishing */
+body {
+  font-family: var(--font-sans);
+  color: #1F2937;
+  background-color: #FAFAFA;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Specific class to match the "We Buy Homes!" / "Where your next chapter begins." script style */
+.brand-script {
+  font-family: var(--font-script);
+}
