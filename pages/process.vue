@@ -17,11 +17,11 @@
 
     <!-- MAIN INTERACTIVE HOMEPAGE COMPONENTS -->
     <div ref="pageContainer" class="relative z-10">
-      <HomeHero />
-      <HomeSolutionSteps />
-      <HomeRenovationGrid />
-      <HomeComparisonMatrix />
-      <HomeHousingGuarantee />
+      <ProcessHero />
+    <ProcessPreSection />
+    <ProcessActiveTransformation />
+    <ProcessMarketLaunch />
+    <ProcessPostSection />
     </div>    
   </div>
 </template>
