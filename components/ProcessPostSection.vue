@@ -84,13 +84,13 @@
               <span class="hidden md:block text-xs uppercase tracking-widest font-extrabold text-slate-500">The Next Step</span>
               <h4 class="text-xl font-extrabold text-white">Next-Chapter Integration</h4>
               <p class="text-slate-400 text-sm leading-relaxed">
-                With your newly secured funds in hand, we smoothly transition you out of temporary housing. Our team works alongside you to finalize your long-term housing arrangements—whether that is helping you purchase your next ideal home or signing a clean lease. 
+                With your newly secured funds in hand. Our team works alongside you to finalize your long-term housing arrangements—whether that is helping you purchase your next ideal home or signing a clean lease. 
               </p>
               
               <!-- Direct No-Profit Risk Guarantee Statement -->
-              <div class="bg-white/5 rounded-xl p-4 border border-white/5 text-xs text-brand-lightblue font-medium mt-4">
+              <!-- <div class="bg-white/5 rounded-xl p-4 border border-white/5 text-xs text-brand-lightblue font-medium mt-4">
                 <strong>Our Hard Protection Guarantee:</strong> In the rare event that a property project fails to produce an increased renovation profit at closing, we completely absorb the financial loss. You owe us absolutely nothing for our labor, time, or materials.
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -100,7 +100,7 @@
               Begin Your New Chapter Today
             </button>
             <p class="text-[11px] text-slate-500 uppercase tracking-widest font-bold mt-4">
-              Free Consultations • Completely Confidential • Harrisonburg, VA
+              Free Consultations • Completely Confidential • People Company
             </p>
           </div>
 

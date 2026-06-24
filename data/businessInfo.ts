@@ -8,9 +8,9 @@ export const businessInfo = {
   website: "nchva.com",
   
   // Geolocation Matrix
-  addressShort: "Harrisonburg, VA",
-  addressLong: "Harrisonburg, VA & Surrounding Rockingham County",
-  serviceArea: "Rockingham County",
+  addressShort: "Shenandoah County",
+  addressLong: "Shenandoah County & surrounding area",
+  serviceArea: "Virginia",
   
 
   // Centralized Assets (Referencing image_591f66.jpg structural layout patterns)

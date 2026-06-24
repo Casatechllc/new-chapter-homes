@@ -77,14 +77,14 @@
             <div class="h-10 w-full bg-slate-100 rounded-xl overflow-hidden relative flex items-center p-1">
               <div class="h-full bg-gradient-to-r from-brand-blue to-brand-lightblue w-[95%] rounded-lg transition-all duration-1000 ease-out flex items-center justify-between px-4 text-white font-bold text-sm shadow-md shadow-brand-blue/20">
                 <span>Unlocking Peak Market Value</span>
-                <span>100% Equity Maxed</span>
+                <span>100% Maximized Share Profit</span>
               </div>
             </div>
           </div>
         </div>
         
         <p class="text-center text-xs text-slate-400 mt-6 italic">
-          *Visual representation based on typical home transformations. We fund renovations out of our pocket to lift the sale price, driving up your final walk-away check.
+          *Visual representation of a typical home transformation. We handle everything completely as-is and stretch our buying offers upward to their absolute limit, making sure the maximum amount of cash goes straight into your pocket to help you start your next chapter.
         </p>
       </div>
 
@@ -130,7 +130,7 @@
             </li>
             <li class="flex items-start gap-2.5">
               <span class="text-emerald-500 font-bold mt-0.5">✓</span>
-              <span><strong>Maximized Returns:</strong> Your house lists at peak value, meaning you keep the maximum equity profit.</span>
+              <span><strong>Maximized Returns:</strong> Your house lists at peak value, meaning we share the maximum equity profit.</span>
             </li>
             <li class="flex items-start gap-2.5">
               <span class="text-emerald-500 font-bold mt-0.5">✓</span>

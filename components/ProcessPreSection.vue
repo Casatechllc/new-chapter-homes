@@ -80,7 +80,7 @@
                   The Zero-Obligation Review
                 </h3>
                 <p class="text-slate-600 text-sm leading-relaxed">
-                  Simply share your primary property details. Our local Harrisonburg experts will conduct a thorough review of the current structural status and analyze any immediate crisis timelines—including helping catch up on backed tax records or directly stepping in to pause pending foreclosure schedules.
+                  Simply share your primary property details. Our local experts will conduct a thorough review of the current structural status and analyze any immediate crisis timelines—including helping catch up on backed tax records or directly stepping in to pause pending foreclosure schedules.
                 </p>
               </div>
             </div>
@@ -95,7 +95,7 @@
                   The Equity Maximization Blueprint
                 </h3>
                 <p class="text-slate-600 text-sm leading-relaxed">
-                  Next, we present a completely transparent, line-by-line project outline. This blueprint maps out the specific modern repairs we will fund entirely out of our pocket, our strategic projected peak sales price, and a precise layout of the increased cash profit heading directly to your final closing check.
+                  Next, we present a completely transparent, line-by-line project outline. This blueprint maps out the specific modern repairs, our strategic projected peak sales price, and a precise layout of the increased cash profit heading directly to your final closing check.
                 </p>
               </div>
             </div>

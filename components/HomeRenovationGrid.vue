@@ -88,7 +88,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0" />
               </svg>
-              <span>Fully eligible for pre-sale restoration</span>
+              <span>Fully eligible for AS-IS solution</span>
             </div>
           </div>
 
@@ -107,21 +107,21 @@ const situations = [
     title: "Deferred Maintenance",
     image: "/images/home-deferred-maintenance.png", // Replace with optimized local paths or placeholders
     tags: ["Outdated Kitchens", "Leaky Roofs", "Bad Flooring", "Peeling Paint"],
-    description: "When repairs pile up, it can feel impossible to fix them yourself before listing. We handle major construction structural details and cosmetically refresh the building from top to bottom."
+    description: "When property maintenance begins to pile up, trying to handle cleanups or expensive construction out-of-pocket can feel paralyzing. We step in to absorb those tasks completely as-is, looking past the surface to evaluate your home at its full upcoming potential."
   },
   {
     category: "Financial",
     title: "Financial Distress",
     image: "/images/home-financial-distress.png",
     tags: ["Backed Taxes", "Behind Payments", "Pre-Foreclosure"],
-    description: "Falling behind on mortgage tracking lines happens easily when things get tough. We can catch up on overdue payments directly, halt property foreclosure schedules, and save your equity credit metrics."
+    description: "Falling behind on property payments happens easily when life gets difficult, causing endless stress. We are a people-first company here to help you breathe easy again. We handle your balances directly, halt stressful collection timelines, and design maximized payouts to save your hard-earned equity."
   },
   {
     category: "Transition",
     title: "Complicated Life Changes",
     image: "/images/home-life-transitions.png",
     tags: ["Hoarding Situations", "Inherited Estates", "Rapid Relocations"],
-    description: "Clearing out decades of property build-up or handling a family estate from across the country is exhausting. Leave everything behind exactly as it sits—we take care of the entire cleanup."
+    description: "Managing a family estate from afar or sorting through decades of personal family memories is an emotionally exhausting journey. You don't have to clean, pack, or apologize for anything. Our compassionate team handles the details softly, letting you look forward with absolute peace of mind."
   }
 ]
 </script>

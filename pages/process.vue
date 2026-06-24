@@ -22,6 +22,7 @@
     <ProcessActiveTransformation />
     <ProcessMarketLaunch />
     <ProcessPostSection />
+    <ProcessFAQ />
     </div>    
   </div>
 </template>

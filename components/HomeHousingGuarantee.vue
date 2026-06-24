@@ -35,7 +35,7 @@
                 </svg>
               </div>
               <p class="text-xs font-bold text-slate-800 leading-tight">
-                Fully paid and coordinated by our team during renovations.
+                We are a people company for the people—handling every detail as-is so you get the maximum payout you deserve.
               </p>
             </div>
           </div>
@@ -49,7 +49,7 @@
           class="lg:col-span-7 space-y-6"
         >
           <span class="text-xs uppercase tracking-widest font-extrabold text-brand-lightblue bg-brand-blue/5 px-4 py-1.5 rounded-full inline-block">
-            Our Transition Guarantee
+            Our Transition Advantage
           </span>
           
           <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">

@@ -1,5 +1,5 @@
 <template>
-  <section class="relative py-24 lg:py-32 overflow-hidden">
+  <section class="relative py-24 lg:py-32 overflow-hidden bg-white">
     
     <!-- Subtle Boundary Divider Lines -->
     <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
@@ -14,7 +14,7 @@
           :enter="{ opacity: 1, y: 0, transition: { duration: 400 } }"
           class="text-xs uppercase tracking-widest font-extrabold text-brand-blue bg-brand-blue/5 px-4 py-1.5 rounded-full inline-block"
         >
-          Stage C: The Market Launch
+          The Outcome: Freedom to Move Forward
         </span>
         <h2 
           v-motion
@@ -22,7 +22,7 @@
           :enter="{ opacity: 1, y: 0, transition: { delay: 150, duration: 500 } }"
           class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight"
         >
-          Capturing <span class="text-gradient">Peak Retail Value</span>
+          A Clean Break with a <span class="text-gradient">Maximized Payout</span>
         </h2>
       </div>
 
@@ -39,20 +39,20 @@
             05
           </span>
           <span class="text-xs uppercase tracking-widest font-extrabold text-slate-400 mt-2 block">
-            The Competitive Sale
+            The Fresh Start Payout
           </span>
         </div>
 
         <!-- Detailed Strategic Text Panel (8 Cols) -->
         <div class="lg:col-span-8 space-y-4 lg:pl-4">
           <h3 class="text-2xl font-extrabold text-slate-900">
-            Direct Strategic Listing
+            A Direct Purchase Built Around You
           </h3>
           <p class="text-slate-600 text-base leading-relaxed">
-            Standard investors want to squeeze you into a fast, lowball cash offer so they can keep the profit margin for themselves. We do the exact opposite. Once your property is fully restored, we position it directly onto the competitive traditional retail market. 
+            Standard cash flippers often try to catch you at a vulnerable moment to corner you into a lowball offer, keeping your home's remaining equity for themselves. We believe a true people-first company does the exact opposite. 
           </p>
           <p class="text-slate-600 text-sm leading-relaxed">
-            By presenting a pristine, move-in-ready home to everyday home buyers, we drive up demand, capture top-tier appraisal evaluations, and spark competitive offers. We don't hide your home in the shadows—we feature it on the open market to command the absolute highest return possible.
+            By completely bypassing standard investor lowballing, we evaluate the absolute highest future potential value of the property and squeeze our direct purchase offer upward to its maximum limits. This ensures a clean check at closing with no hidden fees or surprise costs, putting every dollar possible right into your hands so you can begin your next chapter with confidence.
           </p>
         </div>
       </div>
@@ -65,15 +65,15 @@
         class="mt-10 flex flex-wrap justify-center items-center gap-6 text-xs font-bold uppercase tracking-wider text-slate-400"
       >
         <span class="flex items-center gap-2">
-          <span class="text-brand-lightblue text-sm">✦</span> Listed On Local MLS Matrices
+          <span class="text-emerald-500 text-sm">✓</span> Direct Cash Buyout
         </span>
         <span class="hidden sm:inline text-slate-200">|</span>
         <span class="flex items-center gap-2">
-          <span class="text-brand-lightblue text-sm">✦</span> Open Market Exposure
+          <span class="text-emerald-500 text-sm">✓</span> No Real Estate Fees or Deductions
         </span>
         <span class="hidden sm:inline text-slate-200">|</span>
         <span class="flex items-center gap-2">
-          <span class="text-brand-lightblue text-sm">✦</span> Maximized Payout Target
+          <span class="text-emerald-500 text-sm">✓</span> People-First Equity Protection
         </span>
       </div>
 
@@ -82,5 +82,5 @@
 </template>
 
 <script setup lang="ts">
-// Completely self-contained high-contrast layout configuration block
+// Completely self-contained cash buyout outcome block
 </script>

@@ -1,91 +1,91 @@
 <template>
   <footer class="relative bg-slate-900 text-slate-400 pt-20 pb-10 overflow-hidden">
     
-    <!-- Design Accent Line matching your theme color -->
     <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-blue via-brand-lightblue to-brand-terracotta"></div>
     
-    <div class="container mx-auto px-6 relative z-10">
+    <div class="container mx-auto px-6 relative z-10 max-w-6xl">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-slate-800">
         
-        <!-- COLUMN 1: BRAND IDENTITY & LOGO PLACEHOLDER (4 Cols) -->
         <div class="lg:col-span-4 space-y-6">
           <div class="flex items-center gap-3">
-            <!-- Logo Icon Box -->
-            <div class="w-10 h-10 bg-brand-blue rounded-xl flex items-center justify-center text-white">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            <div class="w-10 h-10 bg-brand-blue rounded-xl flex items-center justify-center text-white shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.317-1.317a4.5 4.5 0 00-6.364 0z" />
               </svg>
             </div>
             <div>
               <span class="text-white font-extrabold text-xl tracking-tight block leading-tight">
-                {{ info.name }}
+                New<span class="text-brand-blue">Chapter</span>
               </span>
               <span class="text-[10px] uppercase tracking-widest font-bold text-slate-500 block mt-0.5">
-                Real Estate Solutions
+                People First Real Estate
               </span>
             </div>
           </div>
           
           <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
-            Empowering homeowners with zero out-of-pocket restorations, custom transition relief, and a completely transparent way to maximize property value.
+            We are a people company for the people. We specialize in competitive, direct home purchases that maximize your final payout, while providing immediate short-term and long-term housing solutions.
           </p>
 
-          <!-- Quick Trust Badge -->
           <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-1.5 rounded-xl text-xs text-slate-300 font-medium">
             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            Locally Operating in Harrisonburg, VA
+            Serving {{ info.addressShort }} Neighbors
           </div>
         </div>
 
-        <!-- COLUMN 2: QUICK NAV PATHS (3 Cols) -->
         <div class="lg:col-span-3 lg:pl-8 space-y-4">
-          <h4 class="text-white font-bold text-sm uppercase tracking-wider">Solutions</h4>
-          <ul class="space-y-2.5 text-sm">
-            <li><NuxtLink to="/how-it-works" class="hover:text-white transition-colors">How It Works</NuxtLink></li>
-            <li><NuxtLink to="/restore-and-sell" class="hover:text-white transition-colors">Restore &amp; Sell Program</NuxtLink></li>
-            <li><NuxtLink to="/help-with-payments" class="hover:text-white transition-colors">Facing Foreclosure Help</NuxtLink></li>
-            <li><NuxtLink to="/moving-support" class="hover:text-white transition-colors">Temporary Housing Support</NuxtLink></li>
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider">How We Help</h4>
+          <ul class="space-y-3 text-sm">
+            <li>
+              <NuxtLink to="/process" class="hover:text-white transition-colors block">Home</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/about" class="hover:text-white transition-colors block">Meet Our Family Team</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/process" class="hover:text-white transition-colors block">Our Buying Process</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/contact" class="hover:text-white transition-colors block">Request a Confidential Offer</NuxtLink>
+            </li>
           </ul>
         </div>
 
-        <!-- COLUMN 3: SERVICE AREA COVERAGE (2 Cols) -->
         <div class="lg:col-span-2 space-y-4">
-          <h4 class="text-white font-bold text-sm uppercase tracking-wider">Service Area</h4>
-          <ul class="space-y-2 text-xs text-slate-500">
-            <li>• Harrisonburg, VA</li>
-            <li>• Rockingham County</li>
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider">Service Regions</h4>
+          <ul class="space-y-2.5 text-xs text-slate-500 font-medium">
+            <li>• {{ info.addressShort }}</li>
             <li>• Shenandoah Valley</li>
-            <li>• Surrounding Regions</li>
+            <li>• Rockingham County</li>
+            <li>• Harrisonburg Region</li>
+            <li>• Surrounding Areas</li>
           </ul>
         </div>
 
-        <!-- COLUMN 4: CONTACT & IMMEDIATE CALL ACTION (3 Cols) -->
         <div class="lg:col-span-3 space-y-4">
-          <h4 class="text-white font-bold text-sm uppercase tracking-wider">Contact Direct</h4>
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider">Direct Access</h4>
           <div class="space-y-3">
             <a 
               :href="`tel:${info.rawPhone}`" 
               class="block p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-brand-lightblue/30 hover:bg-white/10 text-white transition-all group"
             >
-              <p class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Call Our Office</p>
+              <p class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Call or Text Anytime</p>
               <p class="text-base font-extrabold mt-0.5 group-hover:text-brand-lightblue transition-colors">
                 {{ info.phone }}
               </p>
             </a>
             
-            <div class="text-xs text-slate-500 leading-normal pl-2">
-              <p>Available for emergency consultations regarding backed payments and pending foreclosure timelines.</p>
+            <div class="text-xs text-slate-500 leading-relaxed pl-1">
+              <p>We are always available for urgent, judgment-free consultations regarding back payments or fast foreclosure timelines.</p>
             </div>
           </div>
         </div>
 
       </div>
 
-      <!-- SUB-FOOTER CODE: COPYRIGHT & DEVELOPER ATTRIBUTION -->
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
         <p>© {{ new Date().getFullYear() }} {{ info.name }}. All rights reserved.</p>
         
-        <!-- Casatech LLC Backlink Assignment -->
         <p class="text-slate-600">
           Designed &amp; Developed by 
           <a 

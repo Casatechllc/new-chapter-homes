@@ -1,5 +1,5 @@
 <template>
-  <section class="relative min-h-[70vh] flex items-center justify-center pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+  <section class="relative min-h-[70vh] flex items-center justify-center pt-16 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
     
     <div class="absolute inset-0 z-0 overflow-hidden">
       <div 
@@ -37,7 +37,7 @@
             class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight"
           >
             Our Proven Roadmap: <br />
-            From Relief to <span class="text-gradient">Clean Slate</span>
+            We help you start your <span class="text-gradient">new chapter in life</span>
           </h1>
           
           <p 
@@ -53,35 +53,38 @@
             v-motion
             :initial="{ opacity: 0, y: 20 }"
             :enter="{ opacity: 1, y: 0, transition: { delay: 500, duration: 500 } }"
-            class="pt-6 grid grid-cols-1 sm:grid-cols-3 gap-4"
+            class="pt-6 grid grid-cols-1 sm:grid-cols-3 gap-2"
           >
+            <!-- Step 1: Listening & Connecting -->
             <div class="flex items-center gap-3 bg-slate-50 border border-slate-100 p-4 rounded-2xl">
               <div class="w-8 h-8 rounded-lg bg-brand-blue text-white font-bold text-xs flex items-center justify-center shrink-0">
-                A
+                1
               </div>
               <div>
-                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Pre-Process</h3>
-                <p class="text-sm font-bold text-slate-800">Assessment &amp; Plans</p>
+                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Your Situation</h3>
+                <p class="text-sm font-bold text-slate-800">We Listen &amp; Understand</p>
               </div>
             </div>
 
+            <!-- Step 2: Human Support & Relief -->
             <div class="flex items-center gap-3 bg-slate-50 border border-slate-100 p-4 rounded-2xl">
               <div class="w-8 h-8 rounded-lg bg-brand-lightblue text-white font-bold text-xs flex items-center justify-center shrink-0">
-                B
+                2
               </div>
               <div>
-                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Active Stage</h3>
-                <p class="text-sm font-bold text-slate-800">Restore &amp; Protect</p>
+                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Our Promise</h3>
+                <p class="text-sm font-bold text-slate-800">Zero-Judgment Support</p>
               </div>
             </div>
 
+            <!-- Step 3: Maximized Cash Payout -->
             <div class="flex items-center gap-3 bg-slate-50 border border-slate-100 p-4 rounded-2xl">
               <div class="w-8 h-8 rounded-lg bg-brand-terracotta text-white font-bold text-xs flex items-center justify-center shrink-0">
-                C
+                3
               </div>
               <div>
-                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Post-Process</h3>
-                <p class="text-sm font-bold text-slate-800">Closing Payout</p>
+                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">The Outcome</h3>
+                <p class="text-sm font-bold text-slate-800">Maximized Final Payout</p>
               </div>
             </div>
           </div>

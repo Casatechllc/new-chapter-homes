@@ -28,7 +28,7 @@
           :enter="{ opacity: 1, y: 0, transition: { delay: 100, duration: 500 } }"
           class="brand-script text-3xl lg:text-4xl text-brand-lightblue block mb-3"
         >
-          We Buy Homes!
+          We Buy Homes and Share the Profit!
         </span>
 
         <h1 
@@ -125,7 +125,7 @@
                 <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-terracotta"></span>
               </span>
               <p class="text-xs text-slate-600 font-medium leading-normal">
-                Currently actively reviewing neighborhood properties near Harrisonburg.
+                Currently actively reviewing neighborhood properties near Shenandoah Valley.
               </p>
             </div>
           </div>
