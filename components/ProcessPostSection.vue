@@ -61,15 +61,13 @@
               <span class="hidden md:block text-xs uppercase tracking-widest font-extrabold text-slate-500">The Financial Reset</span>
               <h4 class="text-xl font-extrabold text-white">The True Equity Payout</h4>
               <p class="text-slate-400 text-sm leading-relaxed">
-                At the closing table, the home sells to a traditional buyer at its newly maximized retail price. Our actual construction and material costs are simply reimbursed directly out of the top of those new profits. The remaining massive spike in equity goes straight onto your final walk-away check. No out-of-pocket fees, no sudden bills, and zero financial traps.
+                On closing day, you get your maximized upfront cash buyout check. There are absolutely no surprise fees, agent commissions, or hidden closing costs deducted from your money. We handle the property entirely as-is, so you can walk away with absolute financial peace of mind.
               </p>
             </div>
           </div>
 
-          <!-- Decorative Divider Inside Dark Card -->
           <div class="h-px bg-slate-800 w-full"></div>
 
-          <!-- STEP 7: Next-Chapter Integration -->
           <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
             <div class="md:col-span-3 flex items-center gap-4">
               <div class="w-12 h-12 rounded-2xl bg-white/10 text-white font-black text-sm flex items-center justify-center shrink-0 border border-white/10">
@@ -82,21 +80,18 @@
             
             <div class="md:col-span-9 space-y-2">
               <span class="hidden md:block text-xs uppercase tracking-widest font-extrabold text-slate-500">The Next Step</span>
-              <h4 class="text-xl font-extrabold text-white">Next-Chapter Integration</h4>
+              <h4 class="text-xl font-extrabold text-white">Paid Twice &amp; A Safe Landing</h4>
               <p class="text-slate-400 text-sm leading-relaxed">
-                With your newly secured funds in hand. Our team works alongside you to finalize your long-term housing arrangements—whether that is helping you purchase your next ideal home or signing a clean lease. 
+                Once you are safely moved into your new short-term or long-term housing arrangement, our partnership doesn't stop. Down the road, when the home's transition is completely finished, we share the final equity profits with you. That means you get your immediate relief today, and a second bonus check later.
               </p>
-              
-              <!-- Direct No-Profit Risk Guarantee Statement -->
-              <!-- <div class="bg-white/5 rounded-xl p-4 border border-white/5 text-xs text-brand-lightblue font-medium mt-4">
-                <strong>Our Hard Protection Guarantee:</strong> In the rare event that a property project fails to produce an increased renovation profit at closing, we completely absorb the financial loss. You owe us absolutely nothing for our labor, time, or materials.
-              </div> -->
             </div>
           </div>
 
           <!-- TERRACOTTA ORANGE FINAL ANCHOR CTA -->
           <div class="pt-4 text-center">
-            <button class="w-full sm:w-auto px-10 py-5 bg-brand-terracotta hover:bg-opacity-95 text-white text-base font-bold rounded-2xl shadow-xl shadow-brand-terracotta/20 transition-transform active:scale-98 cursor-pointer">
+            <button 
+            @click="openDrawer"
+            class="w-full sm:w-auto px-10 py-5 bg-brand-terracotta hover:bg-opacity-95 text-white text-base font-bold rounded-2xl shadow-xl shadow-brand-terracotta/20 transition-transform active:scale-98 cursor-pointer">
               Begin Your New Chapter Today
             </button>
             <p class="text-[11px] text-slate-500 uppercase tracking-widest font-bold mt-4">
@@ -112,5 +107,9 @@
 </template>
 
 <script setup lang="ts">
+import { useDrawer } from '~/composables/useDrawer'
+
+// Grab the openDrawer function from your global drawer state
+const { openDrawer } = useDrawer()
 // Completely self-contained script panel following your no-module requirement
 </script>

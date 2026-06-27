@@ -51,18 +51,18 @@
           <span class="text-xs uppercase tracking-widest font-extrabold text-brand-lightblue bg-brand-blue/5 px-4 py-1.5 rounded-full inline-block">
             Our Transition Advantage
           </span>
-          
+
           <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
             You Don't Have to Worry About <br />
             <span class="text-gradient">Where You Will Live.</span>
           </h2>
-          
+
           <p class="text-slate-600 text-lg leading-relaxed">
-            The biggest fear most homeowners face when considering major property updates is the disruption. If your house requires deep remodeling, structural structural updates, or a complete cosmetic overhaul, packing up feels impossible. 
+            The biggest fear most families face when selling a home in distress is the sudden panic of relocating. We think you already have enough on your plate. You shouldn't have to carry the stress of a sudden move or wonder where you are going to sleep next week.
           </p>
-          
+
           <p class="text-slate-600 text-base leading-relaxed">
-            We don't just fix buildings; we protect people. Our full-service transition model covers your relocation logistics from day one, giving you complete stability while we maximize your asset's value.
+            We don't just buy houses; we protect people. From organizing safe short-term spaces near your current routine to leveraging our local network to lock in a permanent rental, we cover your housing transition step-by-step—all while making sure you get a maximized upfront offer and a second check down the road.
           </p>
 
           <!-- Core Feature Blocks with specific structural icons -->

@@ -92,10 +92,10 @@
               </div>
               <div class="space-y-2">
                 <h3 class="font-extrabold text-slate-900 text-lg group-hover:text-brand-blue transition-colors duration-200">
-                  The Equity Maximization Blueprint
+                  The Equity Maximization Offer
                 </h3>
                 <p class="text-slate-600 text-sm leading-relaxed">
-                  Next, we present a completely transparent, line-by-line project outline. This blueprint maps out the specific modern repairs, our strategic projected peak sales price, and a precise layout of the increased cash profit heading directly to your final closing check.
+                  We don't bring you standard, rigid investor numbers. Instead, we sit down with you to present a completely transparent layout made just for your situation. We show you our upfront cash offer, the future potential of the property, and exactly how we maximize your payout so you get paid twice by sharing the profit down the road.
                 </p>
               </div>
             </div>
@@ -106,7 +106,7 @@
           <div class="bg-white border border-slate-200/80 rounded-2xl p-4 flex items-center gap-3.5 mt-4 shadow-sm">
             <div class="w-2 h-2 rounded-full bg-brand-terracotta shrink-0 animate-pulse"></div>
             <p class="text-xs text-slate-500 leading-normal font-medium">
-              <strong>Our Commitment:</strong> If you review our custom blueprint and decide it isn't the right fit for your family, you walk away with zero fees or obligations owed. You stay completely in control.
+              <strong>Our Commitment:</strong> If you review our custom experience and decide it isn't the right fit for your family, you walk away with zero fees or obligations owed. You stay completely in control.
             </p>
           </div>
 

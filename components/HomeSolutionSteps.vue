@@ -87,8 +87,10 @@
             Don't take a lowball offer from standard flippers or walk away from your equity. We purchase properties completely as-is, coordinate fast timelines to resolve backed debts, and deliver a clean financial slate.
           </p>
         </div>
-        <button class="px-8 py-4 bg-brand-terracotta hover:bg-opacity-95 font-bold text-white rounded-xl shadow-lg transition-transform hover:-translate-y-0.5 whitespace-nowrap cursor-pointer">
-          See How We Calculate Offers
+        <button 
+        @click=openDrawer
+          class="px-8 py-4 bg-brand-terracotta hover:bg-opacity-95 font-bold text-white rounded-xl shadow-lg transition-transform hover:-translate-y-0.5 whitespace-nowrap cursor-pointer">
+          Ask How We Calculate Offers
         </button>
       </div>
 
@@ -97,6 +99,17 @@
 </template>
 
 <script setup lang="ts">
+import { useDrawer } from '~/composables/useDrawer'
+
+const isMenuOpen = ref(false)
+const { openDrawer } = useDrawer()
+
+const triggerMobileDrawer = () => {
+  isMenuOpen.value = false
+  openDrawer()
+}
+
+
 const steps = [
   {
     num: "01",
@@ -111,7 +124,7 @@ const steps = [
   {
     num: "03",
     title: "Maximized Direct Payout",
-    description: "We skip lowball investor pricing entirely. By analyzing the optimal future asset framework, we stretch our buying offer upward to its absolute limit, placing maximum cash straight onto your closing check."
+    description: "We don’t do corporate lowball offers. Instead, we look at what your home can become and stretch our direct cash offer to its absolute limit—putting the most money possible onto your hands."
   }
 ]
 </script>

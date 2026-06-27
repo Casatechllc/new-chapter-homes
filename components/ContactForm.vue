@@ -33,7 +33,7 @@
           v-model="formData.email"
           type="email" 
           required
-          placeholder="jane@example.com" 
+          placeholder="email@example.com" 
           class="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white rounded-xl text-sm transition-all outline-none"
         />
       </div>

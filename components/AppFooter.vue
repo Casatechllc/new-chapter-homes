@@ -33,7 +33,7 @@
           </div>
         </div>
 
-        <div class="lg:col-span-3 lg:pl-8 space-y-4">
+        <div class="lg:col-span-4 lg:pl-8 space-y-4">
           <h4 class="text-white font-bold text-sm uppercase tracking-wider">How We Help</h4>
           <ul class="space-y-3 text-sm">
             <li>
@@ -51,7 +51,7 @@
           </ul>
         </div>
 
-        <div class="lg:col-span-2 space-y-4">
+        <!-- <div class="lg:col-span-2 space-y-4">
           <h4 class="text-white font-bold text-sm uppercase tracking-wider">Service Regions</h4>
           <ul class="space-y-2.5 text-xs text-slate-500 font-medium">
             <li>• {{ info.addressShort }}</li>
@@ -60,9 +60,9 @@
             <li>• Harrisonburg Region</li>
             <li>• Surrounding Areas</li>
           </ul>
-        </div>
+        </div> -->
 
-        <div class="lg:col-span-3 space-y-4">
+        <div class="lg:col-span-4 space-y-4">
           <h4 class="text-white font-bold text-sm uppercase tracking-wider">Direct Access</h4>
           <div class="space-y-3">
             <a 

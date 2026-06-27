@@ -56,13 +56,18 @@
           :enter="{ opacity: 1, y: 0, transition: { delay: 600, duration: 500 } }"
           class="mt-10 flex flex-wrap gap-4 items-center"
         >
-          <button class="px-8 py-4 bg-brand-terracotta hover:bg-opacity-90 text-white font-semibold rounded-xl shadow-lg shadow-brand-terracotta/20 transform hover:-translate-y-0.5 transition-all duration-200 focus:ring-4 focus:ring-brand-terracotta/30 cursor-pointer">
+          <button 
+          @click="openDrawer"
+          class="px-8 py-4 bg-brand-terracotta hover:bg-opacity-90 text-white font-semibold rounded-xl shadow-lg shadow-brand-terracotta/20 transform hover:-translate-y-0.5 transition-all duration-200 focus:ring-4 focus:ring-brand-terracotta/30 cursor-pointer">
             Get an Offer Today
           </button>
 
-          <button class="px-8 py-4 bg-slate-100 hover:bg-slate-200 border-2 border-slate-200 text-slate-800 font-semibold rounded-xl transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer backdrop-blur-sm">
+          <NuxtLink 
+            to="/process" 
+            class="px-8 py-4 bg-slate-100 hover:bg-slate-200 border-2 border-slate-200 text-slate-800 font-semibold rounded-xl transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer backdrop-blur-sm inline-block text-center"
+          >
             Learn Our Process
-          </button>
+          </NuxtLink>
         </div>
 
         <div 
@@ -149,6 +154,10 @@
 
 <script setup class="ts">
 import { businessInfo } from '~/data/businessInfo'
+import { useDrawer } from '~/composables/useDrawer'
+
+// Grab the openDrawer function from your global drawer state
+const { openDrawer } = useDrawer()
 
 const info = businessInfo
 </script>

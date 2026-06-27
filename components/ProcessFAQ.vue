@@ -77,9 +77,9 @@
         <p class="text-xs sm:text-sm text-slate-500 font-medium">
           Have a unique situation not covered here? Don't worry, we are here for you.
         </p>
-        <a href="#contact" class="text-xs sm:text-sm font-bold text-brand-blue hover:text-brand-lightblue flex items-center gap-1 transition-colors duration-200 group">
+        <NuxtLink  to="/contact" class="text-xs sm:text-sm font-bold text-brand-blue hover:text-brand-lightblue flex items-center gap-1 transition-colors duration-200 group">
           Chat Directly With Our Team <span class="transform group-hover:translate-x-1 transition-transform">→</span>
-        </a>
+        </NuxtLink >
       </div>
 
     </div>

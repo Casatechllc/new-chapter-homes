@@ -1,13 +1,13 @@
 <template>
-  <div class="relative w-full min-h-screen mt-16">
-    <!-- <AppSplashScreen /> -->
+  <div class="relative w-full min-h-screen pt-20">
     <AppHeader />
     <main>
       <NuxtPage />
     </main>
     <AppFooter />
 
-    <!-- CLEAN MODULAR HUB TAG -->
+    <!-- CLEAN MODULAR HUB TAGS -->
+    <AppContactDrawer />
     <AppContactHub />
   </div>
 </template>

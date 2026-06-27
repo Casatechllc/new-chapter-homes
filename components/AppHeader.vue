@@ -20,9 +20,14 @@
         >
           {{ link.name }}
         </NuxtLink>
-        <NuxtLink to="/contact" class="px-5 py-2.5 bg-brand-blue text-white text-sm font-bold rounded-lg hover:bg-brand-blue/90 transition-all">
+        
+        <!-- Open Drawer CTA Button -->
+        <button 
+          @click="openDrawer"
+          class="px-5 py-2.5 bg-brand-blue text-white text-sm font-bold rounded-lg hover:bg-brand-blue/90 transition-all cursor-pointer"
+        >
           Get Started
-        </NuxtLink>
+        </button>
       </nav>
 
       <!-- Mobile Menu Toggle -->
@@ -47,17 +52,30 @@
       >
         {{ link.name }}
       </NuxtLink>
-      <NuxtLink to="/contact" @click="isMenuOpen = false" class="mt-2 text-center w-full px-5 py-4 bg-brand-blue text-white font-bold rounded-xl">
+      
+      <!-- Mobile Open Drawer CTA Button -->
+      <button 
+        @click="triggerMobileDrawer" 
+        class="mt-2 text-center w-full px-5 py-4 bg-brand-blue text-white font-bold rounded-xl cursor-pointer"
+      >
         Get Started
-      </NuxtLink>
+      </button>
     </div>
   </header>
 </template>
 
 <script setup lang="ts">
-const isMenuOpen = ref(false)
+import { ref } from 'vue'
+import { useDrawer } from '~/composables/useDrawer'
 
-// Modular Page Configuration
+const isMenuOpen = ref(false)
+const { openDrawer } = useDrawer()
+
+const triggerMobileDrawer = () => {
+  isMenuOpen.value = false
+  openDrawer()
+}
+
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'Our Process', path: '/process' },

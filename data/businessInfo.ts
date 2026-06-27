@@ -8,8 +8,8 @@ export const businessInfo = {
   website: "nchva.com",
   
   // Geolocation Matrix
-  addressShort: "Shenandoah County",
-  addressLong: "Shenandoah County & surrounding area",
+  addressShort: "The Shenandoah Valley",
+  addressLong: "Shenandoah Valley & surrounding area",
   serviceArea: "Virginia",
   
 

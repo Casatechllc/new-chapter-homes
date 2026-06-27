@@ -71,12 +71,12 @@
           <!-- Bar 3: New Chapter Homes -->
           <div class="space-y-2">
             <div class="flex justify-between text-sm font-semibold text-slate-900">
-              <span class="font-bold">New Chapter Homes (Restore & Sell)</span>
+              <span class="font-bold">New Chapter Homes Initiative</span>
               <span class="text-brand-lightblue font-bold">Maximized Equity Profit</span>
             </div>
             <div class="h-10 w-full bg-slate-100 rounded-xl overflow-hidden relative flex items-center p-1">
               <div class="h-full bg-gradient-to-r from-brand-blue to-brand-lightblue w-[95%] rounded-lg transition-all duration-1000 ease-out flex items-center justify-between px-4 text-white font-bold text-sm shadow-md shadow-brand-blue/20">
-                <span>Unlocking Peak Market Value</span>
+                <span>Unlocking Peak Potential</span>
                 <span>100% Maximized Share Profit</span>
               </div>
             </div>
@@ -126,11 +126,11 @@
           <ul class="space-y-4 text-sm text-slate-800">
             <li class="flex items-start gap-2.5">
               <span class="text-emerald-500 font-bold mt-0.5">✓</span>
-              <span><strong>$0 Out-of-Pocket:</strong> We use our own financial resources to complete all modern upgrades.</span>
+              <span><strong>$0 Out-of-Pocket:</strong> We buy your home directly. There are absolutely zero agent commissions, hidden closing costs, or repair fees.</span>
             </li>
             <li class="flex items-start gap-2.5">
               <span class="text-emerald-500 font-bold mt-0.5">✓</span>
-              <span><strong>Maximized Returns:</strong> Your house lists at peak value, meaning we share the maximum equity profit.</span>
+              <span><strong>Maximized Returns:</strong> Get an upfront cash payout today, then share in the profit—meaning you get paid twice.</span>
             </li>
             <li class="flex items-start gap-2.5">
               <span class="text-emerald-500 font-bold mt-0.5">✓</span>
@@ -138,7 +138,9 @@
             </li>
           </ul>
           
-          <button class="mt-8 w-full py-4 bg-brand-terracotta hover:bg-opacity-95 text-white font-bold rounded-xl shadow-lg shadow-brand-terracotta/20 transition-transform active:scale-98 cursor-pointer">
+          <button 
+          @click="openDrawer"
+          class="mt-8 w-full py-4 bg-brand-terracotta hover:bg-opacity-95 text-white font-bold rounded-xl shadow-lg shadow-brand-terracotta/20 transition-transform active:scale-98 cursor-pointer">
             Check My Home Eligibility
           </button>
         </div>
@@ -170,3 +172,10 @@
     </div>
   </section>
 </template>
+
+<script setup class="ts">
+  import { useDrawer } from '~/composables/useDrawer'
+
+  // Grab the openDrawer function from your global drawer state
+  const { openDrawer } = useDrawer()
+</script>
