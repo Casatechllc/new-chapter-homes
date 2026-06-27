@@ -1,5 +1,5 @@
 <template>
-  <section class="relative py-24 lg:py-32 overflow-hidden bg-white">
+  <section class="relative py-24 lg:py-32 overflow-hidden">
     
     <div class="absolute inset-0 z-0 opacity-[0.03] bg-[linear-gradient(to_right,#0B3D91_1px,transparent_1px),linear-gradient(to_bottom,#0B3D91_1px,transparent_1px)] bg-[size:3rem_3rem]"></div>
     
