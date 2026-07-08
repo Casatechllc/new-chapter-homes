@@ -18,11 +18,12 @@
     <!-- MAIN INTERACTIVE HOMEPAGE COMPONENTS -->
     <div ref="pageContainer" class="relative z-10">
       <ProcessHero />
-    <ProcessPreSection />
-    <ProcessActiveTransformation />
-    <ProcessMarketLaunch />
-    <ProcessPostSection />
-    <ProcessFAQ />
+      <ProcessSteps />
+      <ProcessPreSection />
+      <ProcessActiveTransformation />
+      <ProcessMarketLaunch />
+      <ProcessPostSection />
+      <ProcessFAQ />
     </div>    
   </div>
 </template>
