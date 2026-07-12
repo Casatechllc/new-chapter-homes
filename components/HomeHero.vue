@@ -71,23 +71,22 @@
         </div>
 
         <div 
-          v-motion
-          :initial="{ opacity: 0 }"
-          :enter="{ opacity: 1, transition: { delay: 800 } }"
-          class="mt-8 pt-6 border-t border-slate-200 flex items-center gap-3 text-slate-700"
-        >
-          <div class="w-10 h-10 rounded-full bg-brand-lightblue/10 flex items-center justify-center text-brand-lightblue">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-            </svg>
-          </div>
-          <div>
-            <p class="text-xs text-slate-500 uppercase tracking-wider font-bold">Speak Directly with Us</p>
-            <a :href="`tel:${info.rawPhone}`" class="text-lg font-bold text-slate-900 hover:text-brand-lightblue hover:underline transition-colors">
-              {{ info.phone }}
-            </a>
-          </div>
-        </div>
+  v-motion
+  :initial="{ opacity: 0 }"
+  :enter="{ opacity: 1, transition: { delay: 800 } }"
+  class="mt-8 pt-6 border-t border-slate-200 flex items-center gap-3 text-slate-700"
+>
+  <div class="w-10 h-10 rounded-full bg-brand-lightblue/10 flex items-center justify-center text-brand-lightblue">
+    <!-- Font Awesome Phone Icon -->
+    <i class="fa-solid fa-phone text-sm"></i>
+  </div>
+  <div>
+    <p class="text-xs text-slate-500 uppercase tracking-wider font-bold">Speak Directly with Us</p>
+    <a :href="`tel:${info.rawPhone}`" class="text-lg font-bold text-slate-900 hover:text-brand-lightblue hover:underline transition-colors">
+      {{ info.phone }}
+    </a>
+  </div>
+</div>
 
       </div>
 

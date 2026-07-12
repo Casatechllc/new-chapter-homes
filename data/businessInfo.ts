@@ -9,7 +9,7 @@ export const businessInfo = {
   
   // Geolocation Matrix
   addressShort: "The Shenandoah Valley",
-  addressLong: "Shenandoah Valley & surrounding area",
+  addressLong: "Shenandoah Valley & surrounding areas",
   serviceArea: "Virginia",
   
 

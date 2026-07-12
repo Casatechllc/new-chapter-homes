@@ -114,54 +114,56 @@
             </div>
 
             <!-- Simple input form layout -->
-            <form @submit.prevent="handleSubmit" class="space-y-4">
-              <div>
-                <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-1.5">Your Name</label>
-                <input 
-                  type="text" 
-                  required
-                  placeholder="John Doe" 
-                  class="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white rounded-xl text-sm transition-all outline-none"
-                />
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <ClientOnly>
+              <form @submit.prevent="handleSubmit" class="space-y-4">
                 <div>
-                  <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-1.5">Phone Number</label>
-                  <input 
-                    type="tel" 
-                    required
-                    placeholder="(540) 555-0100" 
-                    class="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white rounded-xl text-sm transition-all outline-none"
-                  />
-                </div>
-                <div>
-                  <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-1.5">Property Location</label>
+                  <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-1.5">Your Name</label>
                   <input 
                     type="text" 
                     required
-                    :placeholder="businessInfo.addressShort + ', VA'" 
+                    placeholder="John Doe" 
                     class="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white rounded-xl text-sm transition-all outline-none"
                   />
                 </div>
-              </div>
 
-              <div>
-                <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-1.5">Tell us a little bit about the situation (Optional)</label>
-                <textarea 
-                  rows="3" 
-                  placeholder="Examples: House needs repairs, behind on payments, inherited property, moving quickly..."
-                  class="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white rounded-xl text-sm transition-all outline-none resize-none"
-                ></textarea>
-              </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-1.5">Phone Number</label>
+                    <input 
+                      type="tel" 
+                      required
+                      placeholder="(540) 555-0100" 
+                      class="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white rounded-xl text-sm transition-all outline-none"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-1.5">Property Location</label>
+                    <input 
+                      type="text" 
+                      required
+                      :placeholder="businessInfo.addressShort + ', VA'" 
+                      class="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white rounded-xl text-sm transition-all outline-none"
+                    />
+                  </div>
+                </div>
 
-              <button 
-                type="submit"
-                class="w-full py-4 bg-brand-terracotta hover:bg-opacity-95 text-white font-extrabold rounded-xl shadow-lg shadow-brand-terracotta/20 transition-all hover:-translate-y-0.5 active:translate-y-0 text-sm cursor-pointer block text-center"
-              >
-                Send Request &amp; Secure Timeline
-              </button>
-            </form>
+                <div>
+                  <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-1.5">Tell us a little bit about the situation (Optional)</label>
+                  <textarea 
+                    rows="3" 
+                    placeholder="Examples: House needs repairs, behind on payments, inherited property, moving quickly..."
+                    class="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white rounded-xl text-sm transition-all outline-none resize-none"
+                  ></textarea>
+                </div>
+
+                <button 
+                  type="submit"
+                  class="w-full py-4 bg-brand-terracotta hover:bg-opacity-95 text-white font-extrabold rounded-xl shadow-lg shadow-brand-terracotta/20 transition-all hover:-translate-y-0.5 active:translate-y-0 text-sm cursor-pointer block text-center"
+                >
+                  Send Request &amp; Secure Timeline
+                </button>
+              </form>
+            </ClientOnly>
 
             <!-- Human Reassurance Tag underneath form button -->
             <div class="mt-4 flex items-center justify-center gap-2 text-[11px] font-medium text-slate-400">
