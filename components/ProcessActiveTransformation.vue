@@ -41,7 +41,7 @@
         >
           <div class="relative rounded-3xl overflow-hidden shadow-xl border border-slate-100 bg-slate-100 aspect-[4/3] lg:aspect-[4/5]">
             <NuxtImg 
-              src="/images/home-hero-bg.png" 
+              src="/images/process-short-term.jpg" 
               alt="Comfortable local short-term housing setup"
               loading="lazy"
               format="webp"
@@ -110,7 +110,7 @@
         >
           <div class="relative rounded-3xl overflow-hidden shadow-xl border border-slate-100 bg-slate-100 aspect-[4/3] lg:aspect-[4/5]">
             <NuxtImg 
-              src="/images/home-hero-bg.png" 
+              src="/images/process-long-term.jpg" 
               alt="Family unlocking the door to their new permanent home"
               loading="lazy"
               format="webp"
