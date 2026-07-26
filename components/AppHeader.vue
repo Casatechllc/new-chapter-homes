@@ -3,11 +3,12 @@
     <div class="container mx-auto px-6 h-20 flex items-center justify-between">
       
       <!-- Logo -->
-      <NuxtLink to="/" class="flex items-center gap-2">
-        <div class="w-8 h-8 bg-brand-blue rounded-lg flex items-center justify-center">
-          <span class="text-white font-bold text-lg">N</span>
-        </div>
-        <span class="text-xl font-bold text-slate-900 tracking-tight">New<span class="text-brand-blue">Chapter</span></span>
+      <NuxtLink to="/" class="flex items-center">
+        <img 
+          src="/new-chapter-homes-llc-icon.png" 
+          alt="New Chapter Homes LLC Logo" 
+          class="h-20 w-auto object-contain"
+        />
       </NuxtLink>
 
       <!-- Desktop Navigation -->

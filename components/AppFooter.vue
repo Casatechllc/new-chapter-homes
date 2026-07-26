@@ -7,21 +7,13 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-slate-800">
         
         <div class="lg:col-span-4 space-y-6">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 bg-brand-blue rounded-xl flex items-center justify-center text-white shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.317-1.317a4.5 4.5 0 00-6.364 0z" />
-              </svg>
-            </div>
-            <div>
-              <span class="text-white font-extrabold text-xl tracking-tight block leading-tight">
-                New<span class="text-brand-blue">Chapter</span>
-              </span>
-              <span class="text-[10px] uppercase tracking-widest font-bold text-slate-500 block mt-0.5">
-                People First Real Estate
-              </span>
-            </div>
-          </div>
+          <NuxtLink to="/" class="inline-block">
+            <img 
+              src="/new-chapter-homes-llc-icon.png" 
+              alt="New Chapter Homes LLC Logo" 
+              class="h-24 w-auto object-contain"
+            />
+          </NuxtLink>
           
           <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
             We are a people company for the people. We specialize in competitive, direct home purchases that maximize your final payout, while providing immediate short-term and long-term housing solutions.

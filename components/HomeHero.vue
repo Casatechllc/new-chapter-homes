@@ -71,22 +71,22 @@
         </div>
 
         <div 
-  v-motion
-  :initial="{ opacity: 0 }"
-  :enter="{ opacity: 1, transition: { delay: 800 } }"
-  class="mt-8 pt-6 border-t border-slate-200 flex items-center gap-3 text-slate-700"
->
-  <div class="w-10 h-10 rounded-full bg-brand-lightblue/10 flex items-center justify-center text-brand-lightblue">
-    <!-- Font Awesome Phone Icon -->
-    <i class="fa-solid fa-phone text-sm"></i>
-  </div>
-  <div>
-    <p class="text-xs text-slate-500 uppercase tracking-wider font-bold">Speak Directly with Us</p>
-    <a :href="`tel:${info.rawPhone}`" class="text-lg font-bold text-slate-900 hover:text-brand-lightblue hover:underline transition-colors">
-      {{ info.phone }}
-    </a>
-  </div>
-</div>
+          v-motion
+          :initial="{ opacity: 0 }"
+          :enter="{ opacity: 1, transition: { delay: 800 } }"
+          class="mt-8 pt-6 border-t border-slate-200 flex items-center gap-3 text-slate-700"
+        >
+          <div class="w-10 h-10 rounded-full bg-brand-lightblue/10 flex items-center justify-center text-brand-lightblue">
+            <!-- Font Awesome Phone Icon -->
+            <i class="fa-solid fa-phone text-sm"></i>
+          </div>
+          <div>
+            <p class="text-xs text-slate-500 uppercase tracking-wider font-bold">Speak Directly with Us</p>
+            <a :href="`tel:${info.rawPhone}`" class="text-lg font-bold text-slate-900 hover:text-brand-lightblue hover:underline transition-colors">
+              {{ info.phone }}
+            </a>
+          </div>
+        </div>
 
       </div>
 
@@ -102,9 +102,7 @@
             <div class="absolute right-4 top-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-medium tracking-wide">
               {{ info.addressShort }}
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mb-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-            </svg>
+            <i class="fa-solid fa-house text-4xl text-white mb-4"></i>
             <h3 class="text-2xl font-bold tracking-tight">{{ info.name }}</h3>
             <p class="text-white/80 text-sm mt-1">Real Estate Solutions</p>
           </div>

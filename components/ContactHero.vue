@@ -40,7 +40,7 @@
             </p>
           </div>
 
-          <!-- Quick Action Action Cards Grid -->
+          <!-- Quick Action Cards Grid -->
           <div 
             v-motion
             :initial="{ opacity: 0, y: 20 }"
@@ -53,9 +53,7 @@
               class="flex items-center gap-4 bg-slate-50 border border-slate-100 p-5 rounded-2xl shadow-sm hover:border-brand-blue/20 hover:shadow-md transition-all duration-300 group"
             >
               <div class="w-12 h-12 rounded-xl bg-brand-blue text-white flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
+                <i class="fa-solid fa-phone text-lg"></i>
               </div>
               <div>
                 <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Call or Text Us</h3>
@@ -71,9 +69,7 @@
               class="flex items-center gap-4 bg-slate-50 border border-slate-100 p-5 rounded-2xl shadow-sm hover:border-brand-blue/20 hover:shadow-md transition-all duration-300 group"
             >
               <div class="w-12 h-12 rounded-xl bg-brand-lightblue text-white flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
+                <i class="fa-solid fa-envelope text-lg"></i>
               </div>
               <div>
                 <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Email Our Team</h3>
@@ -91,9 +87,7 @@
             :enter="{ opacity: 1, transition: { delay: 400 } }"
             class="pt-2 flex items-center justify-center lg:justify-start gap-2 text-emerald-600 font-bold text-xs sm:text-sm"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.317-1.317a4.5 4.5 0 00-6.364 0z" />
-            </svg>
+            <i class="fa-solid fa-heart text-base shrink-0"></i>
             <span>Based in {{ businessInfo.addressShort }} — Proudly serving our {{ businessInfo.serviceArea }} neighbors.</span>
           </div>
 
@@ -167,9 +161,7 @@
 
             <!-- Human Reassurance Tag underneath form button -->
             <div class="mt-4 flex items-center justify-center gap-2 text-[11px] font-medium text-slate-400">
-              <svg xmlns="http://www.w3.org/2000/xl" class="h-4 w-4 text-slate-300" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
-              </svg>
+              <i class="fa-solid fa-lock text-xs text-slate-300"></i>
               <span>Your details stay completely confidential and safe with us.</span>
             </div>
 

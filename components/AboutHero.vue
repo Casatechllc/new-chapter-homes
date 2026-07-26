@@ -52,9 +52,7 @@
             class="p-4 bg-slate-50 border border-slate-100 rounded-2xl flex items-start gap-3 text-left max-w-xl mx-auto lg:mx-0"
           >
             <div class="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 shrink-0 mt-0.5">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.317-1.317a4.5 4.5 0 00-6.364 0z" />
-              </svg>
+              <i class="fa-solid fa-heart text-sm"></i>
             </div>
             <div>
               <h4 class="text-xs font-black uppercase tracking-wider text-slate-400">Our Everyday Promise</h4>

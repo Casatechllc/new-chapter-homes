@@ -30,9 +30,7 @@
             <!-- Bottom Floating Local Assurance Badge -->
             <div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl flex items-center gap-3 border border-white">
               <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
+                <i class="fa-solid fa-check text-sm"></i>
               </div>
               <p class="text-xs font-bold text-slate-800 leading-tight">
                 We are a people company for the people—handling every detail as-is so you get the maximum payout you deserve.
@@ -65,15 +63,13 @@
             We don't just buy houses; we protect people. From organizing safe short-term spaces near your current routine to leveraging our local network to lock in a permanent rental, we cover your housing transition step-by-step—all while making sure you get a maximized upfront offer and a second check down the road.
           </p>
 
-          <!-- Core Feature Blocks with specific structural icons -->
+          <!-- Core Feature Blocks with specific Font Awesome icons -->
           <div class="space-y-4 pt-4">
             
             <!-- Bullet 1: Temporary Housing Support -->
             <div class="flex gap-4 items-start">
               <div class="w-12 h-12 rounded-xl bg-brand-blue/5 flex items-center justify-center text-brand-blue shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
+                <i class="fa-solid fa-city text-lg"></i>
               </div>
               <div>
                 <h4 class="font-bold text-slate-900 text-base">Comfortable Temporary Living</h4>
@@ -86,9 +82,7 @@
             <!-- Bullet 2: Next Home Purchase Integration -->
             <div class="flex gap-4 items-start">
               <div class="w-12 h-12 rounded-xl bg-brand-blue/5 flex items-center justify-center text-brand-blue shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                </svg>
+                <i class="fa-solid fa-house-chimney-user text-lg"></i>
               </div>
               <div>
                 <h4 class="font-bold text-slate-900 text-base">Seamless Long-Term Purchasing Support</h4>
@@ -102,7 +96,7 @@
 
           <!-- Bottom Micro Assurance Anchor Callout -->
           <div class="bg-slate-50 border border-slate-100 rounded-2xl p-4 flex items-center gap-3 mt-6">
-            <span class="text-brand-terracotta text-lg font-bold">★</span>
+            <i class="fa-solid fa-star text-brand-terracotta text-base shrink-0"></i>
             <p class="text-xs text-slate-600 font-medium">
               <strong>Zero Logistical Stress:</strong> Every piece of the moving timeline is structured seamlessly to ensure you move exactly once into your clean slate.
             </p>
