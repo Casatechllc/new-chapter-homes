@@ -26,7 +26,32 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      title: 'New Chapter Homes LLC | People-First Real Estate Solutions',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { 
+          name: 'description', 
+          content: 'Fair upfront cash offers and transparent profit-share options with zero fees or obligations. We guide your housing transition every step of the way.' 
+        },
+        // Open Graph / Facebook / LinkedIn Metadata
+        { property: 'og:type', content: 'website' },
+        { property: 'og:title', content: 'New Chapter Homes LLC | People-First Real Estate Solutions' },
+        { property: 'og:description', content: 'Get a custom cash offer and keep total control with zero hidden fees. We help families navigate home transitions smoothly.' },
+        { property: 'og:image', content: 'https://new-chapter-homes.netlify.app/new-chapter-homes-llc-icon.png' },
+        
+        // Twitter Card Metadata
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: 'New Chapter Homes LLC' },
+        { name: 'twitter:description', content: 'Transparent cash offers and zero-stress housing transitions.' },
+        { name: 'twitter:image', content: 'https://new-chapter-homes.netlify.app/new-chapter-homes-llc-icon.png' }
+      ],
       link: [
+        // Favicon & Touch Icon Configs using icon file
+        { rel: 'icon', type: 'image/png', href: 'https://new-chapter-homes.netlify.app/new-chapter-homes-llc-icon.png' },
+        { rel: 'apple-touch-icon', href: 'https://new-chapter-homes.netlify.app/new-chapter-homes-llc-icon.png' },
+        
+        // External Fonts & Icon Libraries
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         { 
