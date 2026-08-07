@@ -30,7 +30,7 @@
       </div>
 
       <!-- DESKTOP VIEW GRID: Hidden on Mobile devices -->
-      <div class="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <!-- <div class="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
         <div 
           v-for="(member, index) in team" 
           :key="member.name"
@@ -38,9 +38,9 @@
           :initial="{ opacity: 0, y: 30 }"
           :enter="{ opacity: 1, y: 0, transition: { delay: index * 100, duration: 500 } }"
           class="flex flex-col space-y-4 group"
-        >
+        > -->
           <!-- Portrait Container -->
-          <div class="relative rounded-2xl overflow-hidden shadow-md border border-slate-100 bg-slate-50 aspect-[4/5] w-full">
+          <!-- <div class="relative rounded-2xl overflow-hidden shadow-md border border-slate-100 bg-slate-50 aspect-[4/5] w-full">
             <NuxtImg 
               :src="member.image" 
               :alt="member.name + ' — ' + member.role"
@@ -52,9 +52,9 @@
             <div class="absolute bottom-3 left-3 bg-brand-blue/90 backdrop-blur-sm px-2.5 py-1 rounded-lg text-[9px] font-black tracking-widest text-white uppercase">
               {{ member.role }}
             </div>
-          </div>
+          </div> -->
           <!-- Text Details -->
-          <div class="space-y-1">
+          <!-- <div class="space-y-1">
             <h3 class="text-lg font-black text-slate-900">{{ member.name }}</h3>
             <p class="text-xs font-semibold text-brand-lightblue">{{ member.specialty }}</p>
             <p class="text-xs text-slate-500 leading-relaxed pt-1">
@@ -62,7 +62,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- MOBILE VIEW SWIPER CAROUSEL: Visible only on tiny viewports -->
       <div class="md:hidden">
