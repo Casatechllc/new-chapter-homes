@@ -65,7 +65,7 @@
       </div> -->
 
       <!-- MOBILE VIEW SWIPER CAROUSEL: Visible only on tiny viewports -->
-      <div class="md:hidden">
+      <!-- <div class="md:hidden">
         <Swiper
           :modules="[SwiperPagination]"
           :slides-per-view="1.05"
@@ -75,11 +75,11 @@
         >
           <SwiperSlide v-for="member in team" :key="member.name">
             <div class="bg-slate-50/70 border border-slate-100 p-5 rounded-2xl flex flex-col gap-4 text-left min-h-[420px]">
-              
+               -->
               <!-- Mini Team Profile Row -->
-              <div class="flex items-center gap-4">
+              <!-- <div class="flex items-center gap-4"> -->
                 <!-- Compact Image Container (Scaled Down to a neat 24w x 30h layout) -->
-                <div class="relative rounded-xl overflow-hidden shadow-sm bg-slate-100 h-28 w-24 shrink-0">
+                <!-- <div class="relative rounded-xl overflow-hidden shadow-sm bg-slate-100 h-28 w-24 shrink-0">
                   <NuxtImg 
                     :src="member.image" 
                     :alt="member.name"
@@ -87,20 +87,20 @@
                     format="webp"
                     class="w-full h-full object-cover"
                   />
-                </div>
+                </div> -->
                 
                 <!-- Title Stack right beside the profile image -->
-                <div class="space-y-1">
+                <!-- <div class="space-y-1">
                   <span class="text-[9px] font-black tracking-widest text-brand-blue bg-brand-blue/5 px-2 py-0.5 rounded uppercase inline-block">
                     {{ member.role }}
                   </span>
                   <h3 class="text-lg font-black text-slate-900 leading-tight">{{ member.name }}</h3>
                   <p class="text-xs font-bold text-brand-lightblue leading-tight">{{ member.specialty }}</p>
                 </div>
-              </div>
+              </div> -->
 
               <!-- Dedicated Bio Text Pane (Now has full layout breathing room below) -->
-              <div class="border-t border-slate-100 pt-3 flex-grow">
+              <!-- <div class="border-t border-slate-100 pt-3 flex-grow">
                 <p class="text-xs text-slate-600 leading-relaxed">
                   {{ member.bio }}
                 </p>
@@ -109,7 +109,7 @@
             </div>
           </SwiperSlide>
         </Swiper>
-      </div>
+      </div> -->
 
       <!-- Cohesive Shared Closing Reassurance Quote -->
       <div 
