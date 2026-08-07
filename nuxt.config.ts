@@ -15,6 +15,10 @@ export default defineNuxtConfig({
     '@nuxtjs/supabase'
   ],
 
+  supabase: {
+    redirect: false
+  },
+
   runtimeConfig: {
     public: {
       tenantId: process.env.NUXT_PUBLIC_TENANT_ID || ''
