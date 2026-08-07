@@ -1,6 +1,6 @@
+<!-- components/AboutPartners.vue -->
 <template>
   <section class="relative py-20 lg:py-28 overflow-hidden bg-slate-50/40 border-t border-b border-slate-100">
-    
     <div class="container mx-auto px-6 relative z-10 max-w-6xl">
       
       <!-- Section Header -->
@@ -26,62 +26,58 @@
         </p>
       </div>
 
+      <!-- Loading State -->
+      <div v-if="pending" class="flex justify-center items-center py-12">
+        <i class="fa-solid fa-spinner fa-spin text-2xl text-brand-blue"></i>
+      </div>
+
       <!-- Partners Dynamic Grid Framework -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-center max-w-5xl mx-auto">
+      <div v-else class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 sm:gap-6 items-center justify-center max-w-5xl mx-auto">
         <div 
-          v-for="(partner, index) in businessInfo.partners" 
-          :key="partner.name"
+          v-for="(partner, index) in partners" 
+          :key="partner.id"
           v-motion
           :initial="{ opacity: 0, scale: 0.95 }"
           :enter="{ opacity: 1, scale: 1, transition: { delay: index * 75, duration: 400 } }"
-          class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm flex flex-col items-center justify-between min-h-[150px] group hover:shadow-md hover:border-brand-blue/10 transition-all duration-300"
+          class="relative group bg-white rounded-2xl p-4 sm:p-5 border border-slate-100 shadow-sm flex flex-col items-center justify-center min-h-[140px] sm:min-h-[160px] hover:shadow-xl hover:border-brand-blue/20 transition-all duration-300 overflow-hidden"
         >
-          <!-- Main Core Brand Logo Link Wrap -->
-          <a 
-            :href="partner.website" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            class="w-full flex items-center justify-center flex-grow py-3 grayscale group-hover:grayscale-0 transition-all duration-300 transform group-hover:scale-102"
-            :title="'Visit ' + partner.name + ' website'"
+          
+          <!-- BRAND LOGO / HEADER (Centered Perfectly) -->
+          <component 
+            :is="partner.websiteUrl ? 'a' : 'div'"
+            v-bind="partner.websiteUrl ? { href: partner.websiteUrl, target: '_blank', rel: 'noopener noreferrer', title: 'Visit ' + partner.name } : {}"
+            class="w-full h-full flex flex-col items-center justify-center transition-transform duration-300 group-hover:scale-105 cursor-pointer z-10"
           >
-            <!-- Nuxt Image Element fallback safely container handling standard SVG parameters -->
-            <NuxtImg 
+            <img 
+              v-if="partner.logo && !failedLogos.has(partner.id)"
               :src="partner.logo" 
               :alt="partner.name + ' Logo'"
               loading="lazy"
-              class="max-h-12 w-auto object-contain mx-auto"
+              @error="handleImageError(partner.id)"
+              class="max-h-16 sm:max-h-20 w-full object-contain mx-auto"
             />
-          </a>
+            <span v-else class="text-sm sm:text-base font-extrabold text-slate-800 text-center leading-snug">
+              {{ partner.name }}
+            </span>
+          </component>
 
-          <!-- Dynamic Social Media Handles Conditional Drawer Block -->
+          <!-- TRANSPARENT BOTTOM LINK BAR (Hover on Desktop, Static on Mobile) -->
           <div 
-            v-if="hasSocials(partner.socials)" 
-            class="w-full border-t border-slate-50 pt-3 mt-2 flex items-center justify-center gap-3 text-slate-400 opacity-60 group-hover:opacity-100 transition-opacity duration-300"
+            v-if="partner.links && partner.links.length > 0" 
+            class="absolute bottom-0 inset-x-0 py-2 px-2 bg-white/80 backdrop-blur-sm border-t border-slate-100/60 flex items-center justify-center gap-2 transition-all duration-300 z-20
+                   opacity-100 translate-y-0
+                   lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0"
           >
-            <!-- Facebook link track injection -->
             <a 
-              v-if="partner.socials.facebook" 
-              :href="partner.socials.facebook" 
+              v-for="link in partner.links" 
+              :key="link.id"
+              :href="link.url" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="hover:text-brand-blue transition-colors p-1"
+              class="w-7 h-7 rounded-full bg-slate-100/80 border border-slate-200/50 flex items-center justify-center text-slate-500 hover:text-white hover:bg-brand-blue hover:border-brand-blue transition-all duration-200 shadow-2xs hover:scale-110"
+              :title="link.typeName + (link.description ? `: ${link.description}` : '')"
             >
-              <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24">
-                <path d="M9 8H7v3h2v9h3v-9h3l.5-3H12V6c0-.88.39-1 1-1h2V2h-3c-2.42 0-4 1.36-4 4v2z"/>
-              </svg>
-            </a>
-
-            <!-- Instagram link track injection -->
-            <a 
-              v-if="partner.socials.instagram" 
-              :href="partner.socials.instagram" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="hover:text-brand-terracotta transition-colors p-1"
-            >
-              <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-              </svg>
+              <i :class="[getSocialIcon(link.typeName), 'text-[11px]']"></i>
             </a>
           </div>
 
@@ -93,11 +89,153 @@
 </template>
 
 <script setup lang="ts">
-import { businessInfo } from '~/data/businessInfo'
+import { ref } from 'vue'
+import { useRuntimeConfig, useAsyncData } from '#imports'
+import { useSupabaseClient } from '#imports'
 
-// Simple script check logic checking if a specific item object actually has keys populated
-const hasSocials = (socials: Record<string, string> | undefined) => {
-  if (!socials) return false
-  return Object.keys(socials).length > 0
+interface LinkItem {
+  id: string
+  url: string
+  description?: string
+  typeName: string
+}
+
+interface PartnerItem {
+  id: string
+  name: string
+  logo: string
+  websiteUrl?: string
+  links: LinkItem[]
+}
+
+const config = useRuntimeConfig()
+const supabase = useSupabaseClient()
+const tenantId = config.public.tenantId
+
+// Track failed images locally
+const failedLogos = ref<Set<string>>(new Set())
+
+const handleImageError = (partnerId: string) => {
+  failedLogos.value.add(partnerId)
+}
+
+// Helper: Flexible check for website link types
+const isWebsiteType = (typeName: string): boolean => {
+  const clean = (typeName || '').toLowerCase().replace(/[^a-z0-9]/g, '')
+  return ['website', 'web', 'site', 'url', 'homepage', 'domain'].includes(clean)
+}
+
+// Fetch partner data
+const { data: partners, pending, error: asyncError } = await useAsyncData('partners_data', async () => {
+  if (!tenantId) {
+    console.warn('⚠️ [PARTNERS FETCH] tenantId is missing or empty!')
+  }
+
+  // 1. Get the type_id for 'partners'
+  const { data: typeData, error: typeError } = await supabase
+    .from('web_item_types')
+    .select('id, type_name')
+    .ilike('type_name', 'partners')
+    .maybeSingle()
+
+  if (typeError || !typeData) return []
+
+  // 2. Fetch live_web records matching tenant_id and type_id
+  const { data: webItems, error: webItemsError } = await supabase
+    .from('live_web')
+    .select('id, header, image_url, link_group_id')
+    .eq('tenant_id', tenantId)
+    .eq('type_id', typeData.id)
+
+  if (webItemsError || !webItems || webItems.length === 0) return []
+
+  // Extract link_group_ids
+  const linkGroupIds = webItems
+    .map(item => item.link_group_id)
+    .filter((id): id is string => Boolean(id))
+
+  // 3. Fetch web_item_links and join web_item_link_types
+  let linksMap: Record<string, LinkItem[]> = {}
+  
+  if (linkGroupIds.length > 0) {
+    const { data: linksData } = await supabase
+      .from('web_item_links')
+      .select(`
+        id,
+        link_group_id,
+        url,
+        description,
+        web_item_link_types (
+          name
+        )
+      `)
+      .in('link_group_id', linkGroupIds)
+
+    if (linksData) {
+      linksData.forEach((link: any) => {
+        const rawType = Array.isArray(link.web_item_link_types)
+          ? link.web_item_link_types[0]?.name
+          : link.web_item_link_types?.name
+
+        const typeName = (rawType || '').trim()
+        
+        const linkItem: LinkItem = {
+          id: link.id,
+          url: link.url,
+          description: link.description,
+          typeName
+        }
+        
+        if (!linksMap[link.link_group_id]) {
+          linksMap[link.link_group_id] = []
+        }
+        linksMap[link.link_group_id].push(linkItem)
+      })
+    }
+  }
+
+  // 4. Map together into PartnerItem objects
+  return webItems.map(item => {
+    const itemLinks = (item.link_group_id && linksMap[item.link_group_id]) ? linksMap[item.link_group_id] : []
+    const websiteLink = itemLinks.find(l => isWebsiteType(l.typeName))
+
+    return {
+      id: item.id,
+      name: item.header || 'Partner',
+      logo: item.image_url || '',
+      websiteUrl: websiteLink?.url || '',
+      links: itemLinks
+    } as PartnerItem
+  })
+})
+
+if (asyncError.value) {
+  console.error('🚨 [ASYNC DATA ERROR]:', asyncError.value)
+}
+
+// Font Awesome Icon Utility
+const getSocialIcon = (typeName: string) => {
+  const normalized = typeName.toLowerCase().replace(/[^a-z]/g, '')
+  
+  switch (normalized) {
+    case 'facebook':
+      return 'fa-brands fa-facebook-f'
+    case 'instagram':
+      return 'fa-brands fa-instagram'
+    case 'linkedin':
+      return 'fa-brands fa-linkedin-in'
+    case 'x':
+    case 'twitter':
+      return 'fa-brands fa-x-twitter'
+    case 'youtube':
+      return 'fa-brands fa-youtube'
+    case 'website':
+    case 'web':
+    case 'site':
+    case 'url':
+      return 'fa-solid fa-globe'
+    default:
+      return 'fa-solid fa-link'
+  }
 }
 </script>

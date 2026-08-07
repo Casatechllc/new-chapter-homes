@@ -11,8 +11,15 @@ export default defineNuxtConfig({
   // Register Nuxt modules
   modules: [
     '@vueuse/motion/nuxt',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxtjs/supabase'
   ],
+
+  runtimeConfig: {
+    public: {
+      tenantId: process.env.NUXT_PUBLIC_TENANT_ID || ''
+    }
+  },
 
   // Inject your global Tailwind CSS entry file
   css: ['~/assets/css/main.css'],
