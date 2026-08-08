@@ -54,30 +54,16 @@
           class="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white rounded-xl text-sm transition-all outline-none"
         />
       </div>
-      <div class="grid grid-cols-2 gap-4">
-        <div>
-          <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Is it Occupied?</label>
-          <select 
-            v-model="formData.occupancy"
-            class="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white rounded-xl text-sm transition-all outline-none appearance-none cursor-pointer"
-          >
-            <option value="owner">Yes, by Owner</option>
-            <option value="tenant">Yes, by Tenant</option>
-            <option value="vacant">No, it is Vacant</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Estimated Repairs Needed</label>
-          <select 
-            v-model="formData.repairLevel"
-            class="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white rounded-xl text-sm transition-all outline-none appearance-none cursor-pointer"
-          >
-            <option value="none">None (Move-in Ready)</option>
-            <option value="light">Light (Cosmetic/Paint)</option>
-            <option value="moderate">Moderate (Roof/HVAC/Kitchen)</option>
-            <option value="heavy">Heavy (Structural/Full Gut)</option>
-          </select>
-        </div>
+      <div>
+        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Is it Occupied?</label>
+        <select 
+          v-model="formData.occupancy"
+          class="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white rounded-xl text-sm transition-all outline-none appearance-none cursor-pointer"
+        >
+          <option value="owner">Yes, by Owner</option>
+          <option value="tenant">Yes, by Tenant</option>
+          <option value="vacant">No, it is Vacant</option>
+        </select>
       </div>
     </div>
 
@@ -117,10 +103,18 @@
         <textarea 
           v-model="formData.notes"
           rows="4" 
-          placeholder="Feel free to share details here (e.g., behind on payments, inherited home from across the country, hoarding situation, backed taxes). Everything stays 100% confidential."
+          placeholder="Feel free to share details here (e.g., behind on payments, inherited home from across the country, backed taxes). Everything stays 100% confidential."
           class="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white rounded-xl text-sm transition-all outline-none resize-none leading-relaxed"
         ></textarea>
       </div>
+    </div>
+
+    <!-- Success & Error Messages -->
+    <div v-if="successMessage" class="p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl text-xs font-bold text-center">
+      {{ successMessage }}
+    </div>
+    <div v-if="errorMessage" class="p-4 bg-rose-50 border border-rose-200 text-rose-800 rounded-xl text-xs font-bold text-center">
+      {{ errorMessage }}
     </div>
 
     <!-- Submit Trigger -->
@@ -142,25 +136,37 @@ import { ref, reactive } from 'vue'
 const emit = defineEmits(['submit-success'])
 
 const isSubmitting = ref(false)
+const successMessage = ref('')
+const errorMessage = ref('')
+
 const formData = reactive({
   name: '',
   phone: '',
   email: '',
   address: '',
   occupancy: 'owner',
-  repairLevel: 'moderate',
   timeline: 'month',
   housingHelp: 'no',
-  notes: ''
+  notes: '',
+  formType: 'Detailed Contact Form'
 })
 
 const handleSubmit = async () => {
   isSubmitting.value = true
-  
-  // Simulated operational framework integration (e.g., Netlify Forms, API endpoint)
-  await new Promise(resolve => setTimeout(resolve, 1200))
-  
-  emit('submit-success', { ...formData })
-  isSubmitting.value = false
+  successMessage.value = ''
+  errorMessage.value = ''
+
+  try {
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: formData,
+    })
+    successMessage.value = 'Thank you! Your confidential analysis request has been sent successfully.'
+    emit('submit-success', { ...formData })
+  } catch (err: any) {
+    errorMessage.value = err?.data?.statusMessage || 'Failed to send message. Please call us directly.'
+  } finally {
+    isSubmitting.value = false
+  }
 }
 </script>

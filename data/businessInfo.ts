@@ -4,19 +4,25 @@ export const businessInfo = {
   // Contact Channels
   phone: "(540) 616-2321",
   rawPhone: "+15406162321",
-  email: "info@nchva.com", // Useful modular addition
+  email: "newchapterhomesva@gmail.com",
   website: "nchva.com",
   
   // Geolocation Matrix
   addressShort: "The Shenandoah Valley",
   addressLong: "Shenandoah Valley & surrounding areas",
   serviceArea: "Virginia",
+
+  address: "25 N. Liberty St.",
+  city: "Harrisonburg",
+  state: "VA",
+  Zip: "22844",
   
 
   // Centralized Assets (Referencing image_591f66.jpg structural layout patterns)
   heroBgImage: "/images/home-hero-bg.png", // Put your neighborhood/house asset path here
 
-
+  instagram: "https://www.instagram.com/new.chapter.homes/",
+  facebook: "https://www.facebook.com/profile.php?id=61593218183169",
 
   partners: [
     {

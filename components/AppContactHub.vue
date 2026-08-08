@@ -89,8 +89,8 @@ const iconVariants = {
 const contactActions = [
   { label: 'Call Office', icon: 'fa-solid fa-phone', link: `tel:${info.rawPhone}`, target: '_self' },
   { label: 'Email Us', icon: 'fa-solid fa-envelope', link: `mailto:${info.email}`, target: '_self' },
-  { label: 'Office Directions', icon: 'fa-solid fa-location-dot', link: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(info.addressLong)}`, target: '_blank' },
-  { label: 'Instagram', icon: 'fa-brands fa-instagram', link: 'https://instagram.com/newchapterhomes', target: '_blank' },
-  { label: 'Facebook', icon: 'fa-brands fa-facebook-f', link: 'https://facebook.com/newchapterhomes', target: '_blank' }
+  { label: 'Office Directions', icon: 'fa-solid fa-location-dot', link: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${info.address}, ${info.city}, ${info.state} ${info.Zip}`)}`, target: '_blank' },
+  { label: 'Instagram', icon: 'fa-brands fa-instagram', link: info.instagram, target: '_blank' },
+  { label: 'Facebook', icon: 'fa-brands fa-facebook-f', link: info.facebook, target: '_blank' }
 ]
 </script>

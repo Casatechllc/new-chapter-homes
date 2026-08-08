@@ -20,6 +20,10 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
+    emailUser: process.env.EMAIL_USER,
+    emailPass: process.env.EMAIL_PASS,
+    adminEmail: process.env.ADMIN_EMAIL,
+    noreplyAlias: process.env.NOREPLY_ALIAS,
     public: {
       tenantId: process.env.NUXT_PUBLIC_TENANT_ID || ''
     }

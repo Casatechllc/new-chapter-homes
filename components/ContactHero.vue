@@ -47,7 +47,6 @@
             :enter="{ opacity: 1, y: 0, transition: { delay: 300, duration: 500 } }"
             class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto lg:mx-0 text-left"
           >
-            <!-- Dynamic Phone Link -->
             <a 
               :href="'tel:' + businessInfo.rawPhone" 
               class="flex items-center gap-4 bg-slate-50 border border-slate-100 p-5 rounded-2xl shadow-sm hover:border-brand-blue/20 hover:shadow-md transition-all duration-300 group"
@@ -63,7 +62,6 @@
               </div>
             </a>
 
-            <!-- Dynamic Email Link -->
             <a 
               :href="'mailto:' + businessInfo.email" 
               class="flex items-center gap-4 bg-slate-50 border border-slate-100 p-5 rounded-2xl shadow-sm hover:border-brand-blue/20 hover:shadow-md transition-all duration-300 group"
@@ -113,6 +111,7 @@
                 <div>
                   <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-1.5">Your Name</label>
                   <input 
+                    v-model="formData.name"
                     type="text" 
                     required
                     placeholder="John Doe" 
@@ -124,6 +123,7 @@
                   <div>
                     <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-1.5">Phone Number</label>
                     <input 
+                      v-model="formData.phone"
                       type="tel" 
                       required
                       placeholder="(540) 555-0100" 
@@ -133,6 +133,7 @@
                   <div>
                     <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-1.5">Property Location</label>
                     <input 
+                      v-model="formData.address"
                       type="text" 
                       required
                       :placeholder="businessInfo.addressShort + ', VA'" 
@@ -144,6 +145,7 @@
                 <div>
                   <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-1.5">Tell us a little bit about the situation (Optional)</label>
                   <textarea 
+                    v-model="formData.message"
                     rows="3" 
                     placeholder="Examples: House needs repairs, behind on payments, inherited property, moving quickly..."
                     class="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-brand-blue focus:bg-white rounded-xl text-sm transition-all outline-none resize-none"
@@ -152,10 +154,14 @@
 
                 <button 
                   type="submit"
-                  class="w-full py-4 bg-brand-terracotta hover:bg-opacity-95 text-white font-extrabold rounded-xl shadow-lg shadow-brand-terracotta/20 transition-all hover:-translate-y-0.5 active:translate-y-0 text-sm cursor-pointer block text-center"
+                  :disabled="isSubmitting"
+                  class="w-full py-4 bg-brand-terracotta hover:bg-opacity-95 text-white font-extrabold rounded-xl shadow-lg shadow-brand-terracotta/20 transition-all hover:-translate-y-0.5 active:translate-y-0 text-sm cursor-pointer block text-center disabled:opacity-50"
                 >
-                  Send Request &amp; Secure Timeline
+                  {{ isSubmitting ? 'Sending Request...' : 'Send Request &amp; Secure Timeline' }}
                 </button>
+
+                <p v-if="successMessage" class="text-xs text-emerald-600 font-bold text-center mt-2">{{ successMessage }}</p>
+                <p v-if="errorMessage" class="text-xs text-rose-600 font-bold text-center mt-2">{{ errorMessage }}</p>
               </form>
             </ClientOnly>
 
@@ -174,9 +180,40 @@
 </template>
 
 <script setup lang="ts">
+import { ref, reactive } from 'vue'
 import { businessInfo } from '~/data/businessInfo'
 
-const handleSubmit = () => {
-  // Direct integration target logic
+const isSubmitting = ref(false)
+const successMessage = ref('')
+const errorMessage = ref('')
+
+const formData = reactive({
+  name: '',
+  phone: '',
+  address: '',
+  message: '',
+  formType: 'Quick Contact Form'
+})
+
+const handleSubmit = async () => {
+  isSubmitting.value = true
+  successMessage.value = ''
+  errorMessage.value = ''
+
+  try {
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: formData,
+    })
+    successMessage.value = 'Thank you! Your request has been securely sent.'
+    formData.name = ''
+    formData.phone = ''
+    formData.address = ''
+    formData.message = ''
+  } catch (err: any) {
+    errorMessage.value = err?.data?.statusMessage || 'Something went wrong. Please call us directly.'
+  } finally {
+    isSubmitting.value = false
+  }
 }
 </script>
