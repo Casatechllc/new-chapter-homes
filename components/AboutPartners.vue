@@ -32,14 +32,14 @@
       </div>
 
       <!-- Partners Dynamic Grid Framework -->
-      <div v-else class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 sm:gap-6 items-center justify-center max-w-5xl mx-auto">
+      <div v-else class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-5 sm:gap-6 items-center justify-center max-w-5xl mx-auto">
         <div 
           v-for="(partner, index) in partners" 
           :key="partner.id"
           v-motion
           :initial="{ opacity: 0, scale: 0.95 }"
           :enter="{ opacity: 1, scale: 1, transition: { delay: index * 75, duration: 400 } }"
-          class="relative group bg-white rounded-2xl p-4 sm:p-5 border border-slate-100 shadow-sm flex flex-col items-center justify-center min-h-[140px] sm:min-h-[160px] hover:shadow-xl hover:border-brand-blue/20 transition-all duration-300 overflow-hidden"
+          class="relative group bg-white rounded-2xl pb-4 p-2 sm:p-2 lg:p-4 sm:max-h-60 lg:max-h-60 border border-slate-100 shadow-sm flex flex-col items-center justify-center  hover:shadow-xl hover:border-brand-blue/20 transition-all duration-300 overflow-hidden"
         >
           
           <!-- BRAND LOGO / HEADER (Centered Perfectly) -->
@@ -54,17 +54,17 @@
               :alt="partner.name + ' Logo'"
               loading="lazy"
               @error="handleImageError(partner.id)"
-              class="max-h-16 sm:max-h-20 w-full object-contain mx-auto"
+              class="max-h-40 sm:max-h-40 w-full object-contain mx-auto pb-10 lg:pb-0"
             />
-            <span v-else class="text-sm sm:text-base font-extrabold text-slate-800 text-center leading-snug">
+            <!-- <span v-else class="text-sm sm:text-base font-extrabold text-slate-800 text-center leading-snug">
               {{ partner.name }}
-            </span>
+            </span> -->
           </component>
 
           <!-- TRANSPARENT BOTTOM LINK BAR (Hover on Desktop, Static on Mobile) -->
           <div 
             v-if="partner.links && partner.links.length > 0" 
-            class="absolute bottom-0 inset-x-0 py-2 px-2 bg-white/80 backdrop-blur-sm border-t border-slate-100/60 flex items-center justify-center gap-2 transition-all duration-300 z-20
+            class="absolute bottom-0 inset-x-0 py-2 px-2 backdrop-blur-sm border-t border-slate-100/60 flex items-center justify-center gap-2 transition-all duration-300 z-20
                    opacity-100 translate-y-0
                    lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0"
           >
